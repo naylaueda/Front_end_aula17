@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:cornflowerblue;
+}
+
+
+button{
+    position: absolute;
+    left: 50%;
+    top: 690px;
+    background-color: #FA1F2A;
+    padding: 20px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor:grab;
+    transition: all 1s ease-in-out;
+}
+
+button:hover{
+    background-color:#0058CC;
+    border-style: solid;
+}
+.quadrado{
+    background-color: cornflowerblue;
+    height: 170px;
+    width: 150px;
+    position: absolute;
+    top: 180px;
+    left: 290px;
+    z-index: -1;
+}
+
+.chao{
+    background-color: rgb(29, 158, 36);
+    height: 80px;
+    position: relative;
+    top: 680px;
+    z-index: -1;
+}
+
+#caixa{
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    animation: moveCaixa 5s infinite;
+}
+
+@keyframes moveCaixa{
+    0%{
+        transform: translateY(1px)
+       }
+95%{
+    transform: translateY(1px)
+}
+     100%{
+        transform: translateY(-100px);
+     }
+    
+}
+
+#estrela{
+    position: absolute;
+    left: 320px;
+    top: 210px;
+    width: 100px;
+    z-index: -2;
+    animation: moveEstrela 5s infinite;
+}
+
+@keyframes moveEstrela{
+    0%{
+        transform: translateY(1px)
+       }
+       97%{
+    transform: translateY(1px)
+}
+     100%{
+        transform: translateY(-200px) rotate(90deg);
+     }
+}
+
+#mario{
+    position: absolute;
+    left: 10px;
+    top: 400px;
+    width: 150px;
+    animation: moveMario 5s infinite;
+}
+@keyframes moveMario {
+    0%{
+        transform: translateX(0px) translateY(0px)
+       }
+
+     90%{
+        transform: translateX(300px) translateY(100px);
+     }
+     100%{
+        transform: translateX(300px) translateY(-100px);
+     }
+}
+
+#lakitu{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    animation: moveLakitu 10s infinite;
+}
+
+@keyframes moveLakitu{
+    0%{
+        opacity: 0%;
+        width: 100px;
+    }
+    
+    100%{
+        transform: translateX(calc(100vw - 200px));
+        opacity: 100%;
+        width: 250px;
+    }
+}
